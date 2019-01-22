@@ -17,9 +17,10 @@ print('Max number is ', max(input('Input int number: ')))
 
 a = input('Input the first parameter: ')
 b = input('Input the second parameter: ')
-a = (a, b)
-b = a[0]
-a = a[1]
+# a = (a, b)
+# b = a[0]
+# a = a[1]
+a, b = b, a
 print('a = ', a, ', b = ', b)
 
 
