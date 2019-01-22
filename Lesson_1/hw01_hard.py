@@ -14,3 +14,10 @@ __author__ = 'Ваши Ф.И.О.'
 # если точно известно, что её значение не изменялось?
 
 
+#import math
+#a = math.inf
+
+a = float('inf')
+print(a == a ** 2)
+print(a == a * 2)
+print(a > 999999)
