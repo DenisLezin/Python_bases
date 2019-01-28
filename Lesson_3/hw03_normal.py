@@ -2,7 +2,7 @@ __author__ = 'Лезин Денис Андреевич'
 # Задание-1:
 # Напишите функцию, возвращающую ряд Фибоначчи с n-элемента до m-элемента.
 # Первыми элементами ряда считать цифры 1 1
-
+'''
 def fib_func(n, m):
     fib1 = 1
     fib2 = 1
@@ -18,7 +18,7 @@ def fib_func(n, m):
     return lst_fib
 
 print(fib_func(4, 6))
-
+'''
 def fib_func(n, m):
     lst_fib = []
     def fib_recur(num):
