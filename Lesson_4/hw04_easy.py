@@ -22,7 +22,7 @@ print(f'Old list = {lst}\nNew list = {lst_new}')
 
 lst_fruits1 = ['apple', 'orange', 'banana', 'kiwi', 'grape']
 lst_fruits2 = ['kiwi', 'plum', 'orange', 'apple']
-lst_fruits3 = [elm for elm in lst_fruits1 if elm in lst_fruits2]
+lst_fruits3 = [i for i in lst_fruits1 if i in lst_fruits2]
 print(lst_fruits3)
 
 
