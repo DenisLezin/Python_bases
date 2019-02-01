@@ -27,3 +27,21 @@ print(lst)
 # Найдите и выведите самую длинную последовательность одинаковых цифр
 # в вышезаполненном файле.
 
+import random
+num = ''.join([str(random.randint(0,9)) for _ in range(2500)])
+seq_tmp = ''
+seq = ''
+prev = 10
+
+for i in num:
+    if not seq_tmp or int(i) == prev:
+        seq_tmp += i
+    else:
+        seq = seq_tmp if len(seq_tmp) > len(seq) else seq
+        seq_tmp = i
+        prev = int(i)
+
+with open('test.txt', 'r+') as f:
+    f.write(num)
+
+print(seq)
