@@ -4,7 +4,21 @@
 # Т.е. из строки "mtMmEZUOmcq" нужно получить ['mt', 'm', 'mcq']
 # Решить задачу двумя способами: с помощью re и без.
 
+import re
+print(re.findall('[a-z]+', 'mtMmEZUOmcq'))
 
+string = 'mtMmEZUOmcq'
+ch = ''
+lst = []
+for i in string:
+    if i.islower():
+        ch += i
+    else:
+        if ch:
+            lst.append(ch)
+            ch = ''
+if ch: lst.append(ch) 
+print(lst)
 
 # Задание-2:
 # Напишите скрипт, заполняющий указанный файл (самостоятельно задайте имя файла)
