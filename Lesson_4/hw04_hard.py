@@ -43,3 +43,13 @@ number = """
 05886116467109405077541002256983155200055935729725
 71636269561882670428252483600823257530420752963450"""
 
+n_list = [el for el in number if el != '\n']
+print(n_list)
+
+max = 0
+for i in range(len(n_list)-4):
+    if int(n_list[i]) *int(n_list[i+1])*int(n_list[i+2])*int(n_list[i+3])*int(n_list[i+4]) > max:
+        max = int(n_list[i])*int(n_list[i+1])*int(n_list[i+2])*int(n_list[i+3])*int(n_list[i+4])
+        index = i
+
+print("Наибольшее произведение = ", max, ", индекс = ", index)
