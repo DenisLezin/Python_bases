@@ -41,7 +41,7 @@ def directories():
 # Напишите скрипт, создающий копию файла, из которого запущен данный скрипт.
 # ИСПОЛЬЗОВАТЬ ТОЛЬКО МОДУЛЬ OS
 
-def copy_this_file():
+def copy_this_file1():
     base_filename = os.path._getfullpathname(__file__)
     copy_filename = os.path.join(os.getcwd(), os.path.basename(__file__).replace('.', '_copy.'))
     command = f'copy {base_filename} {copy_filename}'
@@ -51,7 +51,19 @@ def copy_this_file():
     else:
         os.popen(command)
 
-#copy_this_file()
 
-#os.remove(copy_filename)
-#print(command)
+#copy_this_file1()
+
+
+def copy_this_file2():
+    base_filename = os.path._getfullpathname(__file__)
+    copy_filename = os.path._getfullpathname(__file__).replace('.', '_copy.')
+    with open(base_filename, 'r', encoding='UTF-8') as f:
+        lst = f.readlines()
+    with open(copy_filename, 'w', encoding='UTF-8') as f:
+        f.writelines(lst)
+
+
+
+#copy_this_file2()
+os.remove(os.path.join(os.getcwd(), os.path.basename(__file__).replace('.', '_copy.')))
