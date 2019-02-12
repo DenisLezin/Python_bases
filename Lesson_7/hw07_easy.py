@@ -3,6 +3,13 @@
 и т.д.
 '''
 
+# class MyList(list):
+#     def __getitem__(self, offset):
+#         print(f'The first element is 5')
+#         return list.__getitem__(self, offset - 5)
+# ML = MyList('asfsdsafda')
+# print(ML[5])
+
 '''
 Задача-2: Придумать любу структуру данных. Она должна содержать два атрибута.
 Значение одного атрибута передается в конструктор, а значение другого - определяетсяъ
@@ -14,6 +21,18 @@
 между подходом с использованием метода __str__ и без него.
 '''
 
+class MyClass():
+    def __init__(self, salary):
+        self.salary = salary
+        self.bonus = self.salary // 100 * 10
+    def main_cost(self):
+        self.income = self.salary + self.bonus
+        return self.income
+    def __str__(self):
+        return f'Income {self.income},,,,'
+
+y = MyClass(30000)
+print(y)
 '''
 Задача-3: Продолжить работу над задачей 2. Добавить еще один метод. Он должен
 вывзваться из экземпляра класса. В этот метод нужно передать некое значение.

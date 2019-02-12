@@ -6,3 +6,17 @@
 Метод __add__ должен реализовывать сложение матриц, а __str__ - вывод итоговой
 матрицы.
 '''
+
+class Matrix:
+    def __init__(self, mtrx):
+        self.mtrx = mtrx
+
+    def __str__(self):
+        self.mtrx_str = '\n'.join(str(i) for i in self.mtrx)
+        return self.mtrx_str
+
+    def __add__(self, other):
+        result = []
+        for i in range(len(self.mtrx[i])):
+            numbers = []
+            pass
